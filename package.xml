@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd"
+            schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>mivia_rover_description</name>
+  <version>0.0.0</version>
+
+  <description>
+  	Description package for the MIVIA Rover platform: URDF/Xacro files, meshes and RViz configurations for ros2_control and diff_drive_controller.
+  </description>
+
+  <maintainer email="aguarini@unisa.it">Alessio Guarini</maintainer>
+
+  <!-- Allinea la licenza a quella degli esempi ros2_control_demos -->
+  <license>Apache-2.0</license>
+
+  <!-- ========= BUILD TOOL ========= -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- ========= RUNTIME / EXEC DEPENDS ========= -->
+  <!-- Necessario per processare i file .urdf.xacro -->
+  <exec_depend>xacro</exec_depend>
+
+  <!-- Per visualizzare il robot (come nell'esempio ros2_control_demo_description) -->
+  <exec_depend>rviz2</exec_depend>
+
+  <!-- Tipico per i description package usati in launch di visualizzazione -->
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>joint_state_publisher</exec_depend>
+
+  <!-- ========= TEST (OPZIONALE MA UTILE) ========= -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <!-- ========= EXPORT ========= -->
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
